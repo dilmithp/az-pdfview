@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-allianz-blue: #003781;
+  --color-allianz-medblue: #0066CC;
+  --color-allianz-teal: #00A0DF;
+  --color-allianz-lightgray: #F4F6F9;
+  --color-allianz-navy: #1A1A2E;
+
+  --font-sans: "Inter", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #F4F6F9;
+  --foreground: #1A1A2E;
+  --allianz-blue: #003781;
+  --allianz-medblue: #0066CC;
+  --allianz-teal: #00A0DF;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-allianz-navy;
+  }
+}

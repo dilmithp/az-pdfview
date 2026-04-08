@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PdfFile {
+  id        String   @id @default(cuid())
+  title     String
+  filename  String
+  url       String
+  size      Int
+  publicId  String   @unique // Cloudinary public_id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
